@@ -61,7 +61,7 @@ def buy(buy_time,mall):
         btn_order='#submitOrder_1 > div.wrapper > a'
     else:
         btn_buy='#J_LinkBuy'
-        btn_order='#submitOrder_1 > div > a'
+        btn_order='#submitOrderPC_1 > div > a'
 
     while True:
         #现在时间大于预设时间则开售抢购
@@ -76,16 +76,18 @@ def buy(buy_time,mall):
 
     while True:
         try:
-            #找到“立即下单”，点击
+            #找到“提交订单”，点击
             driver.find_element_by_css_selector(btn_order).click()
             #下单成功，跳转至支付页面
-            print("购买成功")
+            print("订单提交成功")
             break
-        except:
+        except Exception as ee:
+            print(str(ee))
             time.sleep(0.3)
     
 
 if __name__ == "__main__":
+    #url = "https://detail.tmall.com/item.htm?spm=a1z0d.6639537.1997196601.4.b42a7484vqMOeS&id=523741145509"
     url="https://detail.tmall.com/item.htm?id=553299806245&price=48-480&sourceType=item&suid=f1bf6ed4-d6fb-439c-b03f-f922d3114f1e&ut_sk=1.SVuXNhV4QSsDAN4hmHXpI5BN_21646297_1587865385691.DingTalk.1&un=76f59ecb83db5b288bd7bab98ffeb263&share_crt_v=1&cpp=1&shareurl=true&spm=a313p.22.2x1.1129813302986&short_name=h.ViaSOk8&app=chrome&skuId=3829227860466"
     mall=input("请选择商城（淘宝 1  天猫 2  输入数字即可）： ")
     buydate = datetime.date.today()
