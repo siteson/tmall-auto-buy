@@ -11,7 +11,8 @@
 
     提示：
     1. pip install selenium
-    2. 下载对应版本的 ChromeDriver http://npm.taobao.org/mirrors/chromedriver/, 查看版本号：在Chrome开发者模式的终端中输入 navigator.appVersion
+    2. 查看Chrome版本号：在Chrome的终端中输入 navigator.appVersion
+    3. 下载对应版本的 ChromeDriver，网址：http://npm.taobao.org/mirrors/chromedriver/
     
     使用步奏：
     1. 确保已经安装了 python 和 selenium
