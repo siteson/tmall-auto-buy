@@ -11,9 +11,11 @@
 
     提示：
     1. pip install selenium
-    2. 下载对应版本的 ChromeDriver http://npm.taobao.org/mirrors/chromedriver/, 查看版本号：navigator.appVersion
+    2. 下载对应版本的 ChromeDriver http://npm.taobao.org/mirrors/chromedriver/, 查看版本号：在Chrome开发者模式的终端中输入 navigator.appVersion
     
     使用步奏：
-    1. 选择商城并输入开售时间
-    2. 程序自动打开chrome浏览器访问链接，跳至登陆页面，请选择扫码登陆（密码登录会被拦截）
-    3. 开售后自动下单，在淘宝规定时间内完成支付
+    1. 确保已经安装了 python 和 selenium
+    2. 克隆 auto_buy_fm2.py，并把下载好的 ChromeDriver 放在旁边（其他文件只是不同的版本，可以不用管）
+    3. 运行 auto_buy_fm2.py 选择商城并输入开售时间
+    4. 程序自动打开chrome浏览器访问链接，跳至登陆页面，请选择扫码登陆（密码登录会被拦截）
+    5. 开售后自动下单，在淘宝规定时间内完成支付
